@@ -1,0 +1,18 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: elephant
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+      show-sql: true
+  application:
+    name: USER-SERVICE
+
+  config:
+    import: 'optional:configserver:'
+
